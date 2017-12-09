@@ -1,0 +1,12 @@
+
+    $sql = "INSERT INTO Users (username, password, email) VALUES (?, ?, ?);";
+    $sth = $DBH->prepare($sql);
+	
+	$sth->bindParam(1, $username, PDO::PARAM_STR);
+	$sth->bindParam(2, $password, PDO::PARAM_STR);
+	$sth->bindParam(3, $email, PDO::PARAM_STR);
+	
+	$sth->execute();
+    
+    echo 'You are now registered!';
+

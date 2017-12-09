@@ -1,0 +1,86 @@
+<!DOCTYPE html><html itemscope="" itemtype="http://schema.org/Product" lang="en"><head><title>repl.it - PHP - Lecture 2</title><link href="//fonts.googleapis.com/css?family=Questrial|Raleway:400,100|Crimson+Text|PT+Mono" rel="stylesheet" type="text/css"/><link type="text/css" rel="stylesheet" href="/public/css/print.css" media="print"/><link type="text/css" rel="stylesheet" href="/public/css/loading.css"/><link rel="shortcut icon" href="/public/images/favicon.ico" type="image/vnd.microsoft.icon"/><link rel="apple-touch-icon" href="/public/images/apple-touch-icon.png" type="image/png"/><link rel="alternate" type="application/json+oembed" href="https://repl.it/data/oembed?url=https%3A%2F%2Frepl.it%2FLJhN%2F7" title="PHP - Lecture 2"/><script type="text/javascript">!function(){
+        var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+        analytics.load('jdVID8rHoI7wkCBDjKmjApGBGWclWIKJ');
+      }}();</script><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-25629695-1', 'auto');
+ga('send', 'pageview');</script><script>REPLIT_DATA = JSON.parse(atob('eyJpZCI6MTI4ODcxMjUsInNlc3Npb25faWQiOiJMSmhOIiwicmV2aXNpb25faWQiOiI3IiwiZWRpdG9yX3RleHQiOiIvLyAxLiBleGFtcGxlIG9mIGNvbmNhdGVuYXRpbmcgc3RyaW5ncyAoam9pbmluZyBzdHJpbmdzIHRvZ2V0aGVyIClcbiRmaXJzdE5hbWUgPSAmIzM5O1NlYW4mIzM5OztcbiRsYXN0TmFtZSA9ICYjMzk7Q2l0aXplbiYjMzk7O1xuXG4kbmFtZSA9ICRmaXJzdE5hbWUuJnF1b3Q7ICZxdW90Oy4kbGFzdE5hbWU7XG5cbmVjaG8gJnF1b3Q7XFxuMS4mcXVvdDs7IC8vIHRoaXMganVzdCBvdXRwdXRzIGEgbmV3IGxpbmVcblxuZWNobyAkbmFtZTtcblxuLy8gMi4gZXhhbXBsZSBvZiBlc2NhcGluZyBjaGFyYXRlcnNcbiRzdHIgPSAmcXVvdDtUaGlzIGlzIGFuIGV4YW1wbGUgXFwmcXVvdDtvZiBhIHF1b3RlXFwmcXVvdDsgaW4gYSBzdHJpbmcmcXVvdDs7XG5lY2hvICZxdW90O1xcbjIuJnF1b3Q7O1xuZWNobyAkc3RyO1xuLy9cbi8vIDMuIGFuZCA0LiB1c2luZyB0aGUgc3RybGVuKCkgdG8gZmluZCB0aGUgbnVtYmVyIG9mIGNoYXJhY3RlcnMgaW4gYSBzdHJpbmdcbi8vXG5lY2hvICZxdW90O1xcbjMuJnF1b3Q7O1xuJHN0ciA9ICYjMzk7YWJjZGVmJiMzOTs7XG5lY2hvICZxdW90O1RoZSBOdW1iZXIgb2YgY2hhcmFjdGVycyBpbiBzdHJpbmcgaXM6ICZxdW90Oy5zdHJsZW4oJHN0cik7IC8vIDZcbmVjaG8gJnF1b3Q7XFxuNC4mcXVvdDs7XG4kc3RyID0gJiMzOTtTZWFuIENpdGl6ZW4mIzM5OztcbmVjaG8gJnF1b3Q7VGhlIE51bWJlciBvZiBjaGFyYWN0ZXJzIGluIHN0cmluZyBpczogJnF1b3Q7LnN0cmxlbigkc3RyKTsgLy8gMTJcblxuLy8gNS4gdXNpbmcgdGhlIHN0cmxlbigpIGluIGJ1aWx0IHBocCBmdW5jdGlvbiB0byB0cmltIGxlYWRpbmcgYW5kIHRyYWlsaW5nIGNoYXJhY3RlcnNcbi8vIGZyb20gYSBzdHJpbmcsIGluIHRoaXMgZXhhbXBsZSB3ZSBhcmUgcmVtb3ZpbmcgYmxhbmsgY2hhcmFjdGVycyBmcm9tIHRoZSBzdGFydFxuLy8gYW5kIGVuZCBvZiB0aGUgc3RyaW5nIFxuZWNobyAmcXVvdDtcXG41LiZxdW90OzsgXG5cbiRzdHIgPSAmIzM5OyBhYiBjZGVmICYjMzk7O1xuZWNobyB0cmltKCRzdHIpOyAvLyAmIzM5O2FiIGNkZWYmIzM5O1xuLy9cbi8vIDYuIGV4YW1wbGUgb2YgdXNpbmcgPT0gY29tcGFyaXNvbiBvcGVyYXRvclxuJG9uZSA9IDEwMDtcbiR0d28gPSAmcXVvdDsxMDAmcXVvdDs7XG4vL1xuaWYgKCRvbmUgPT0gJHR3bylcbiAgZWNobyAmcXVvdDtcXG42LiZxdW90Oy4mcXVvdDt2YXJpYWJsZXMgYXJlIGVxdWFsJnF1b3Q7O1xuZWxzZVxuICAgIGVjaG8gJnF1b3Q7XFxuNi4mcXVvdDsuJnF1b3Q7dmFyaWFibGVzIGFyZSBub3QgZXF1YWwmcXVvdDs7XG4vL1xuLy8gNy4gZXhhbXBsZSBvZiB1c2luZyA9PT0gY29tcGFyaXNvbiBvcGVyYXRvclxuLy9cbmlmICgkb25lID09PSAkdHdvKVxuICBlY2hvICZxdW90O1xcbjcuJnF1b3Q7LiZxdW90O3ZhcmlhYmxlcyBhcmUgZXF1YWwmcXVvdDs7XG5lbHNlXG4gICAgZWNobyAmcXVvdDtcXG43LiZxdW90Oy4mcXVvdDt2YXJpYWJsZXMgYXJlIG5vdCBlcXVhbCZxdW90Oztcbi8vXG4vLyA4LiBjaGVjayBpZiB2YXJpYWJsZSAkZnJ0eSBoYXMgYmVlbiBkZWZpbmVkXG4vLyB3ZSBoYXZlbiYjMzk7dCBkZWZpbmVkIGl0IGFueXdoZXJlIGFib3ZlIHNvIHNob3VsZCByZXR1cm4gZmFsc2Vcbi8vXG5pZiAoaXNzZXQoJGZydHkpKVxuICBlY2hvICZxdW90O1xcbjguIHZhcmlhYmxlIGRlZmluZWQmcXVvdDs7IFxuZWxzZVxuICBlY2hvICZxdW90O1xcbjguIHZhcmlhYmxlIG5vdCBzZXQgb3IgdW5kZWZpbmVkJnF1b3Q7OyBcbi8vXG4vLyA5LiBjaGVjayBpZiB2YXJpYWJsZSBpcyBhIHN0cmluZ1xuLy9cbiRmaXJzdG5hbWUgPSAmIzM5O1NlYW4mIzM5OztcbmlmIChpc19zdHJpbmcoJGZpcnN0bmFtZSkpXG4gIGVjaG8gJnF1b3Q7XFxuOS4mcXVvdDsuJnF1b3Q7VmFyaWFibGUgaXMgYSBzdHJpbmcmcXVvdDs7XG5lbHNlXG4gIGVjaG8gJnF1b3Q7XFxuOS4mcXVvdDsuJnF1b3Q7VmFyaWFibGUgaXMgbm90IGEgc3RyaW5nJnF1b3Q7O1xuLy9cbi8vIDEwLiBjaGVjayBpZiB2YXJpYWJsZSBpcyBhbiBpbnRlZ2VyXG4vL1xuaWYgKGlzX2ludCgkZmlyc3RuYW1lKSlcbiAgZWNobyAmcXVvdDtcXG4xMC4mcXVvdDsuJnF1b3Q7VmFyaWFibGUgaXMgYSBpbnRlZ2VyJnF1b3Q7O1xuZWxzZVxuICBlY2hvICZxdW90O1xcbjEwLiZxdW90Oy4mcXVvdDtWYXJpYWJsZSBpcyBub3QgYW4gaW50ZWdlciZxdW90OztcbiBcblxuXG5cbiAgXG4iLCJjb25zb2xlX2R1bXAiOiJQSFAgNy4wLjggKGNsaSkgKGJ1aWx0OiBKdW4gMjMgMjAxNiAyMzozOToxNCkgKCBOVFMgKVxuQ29weXJpZ2h0IChjKSAxOTk3LTIwMTYgVGhlIFBIUCBHcm91cFxuWmVuZCBFbmdpbmUgdjMuMC4wLCBDb3B5cmlnaHQgKGMpIDE5OTgtMjAxNiBaZW5kIFRlY2hub2xvZ2llc1xuXG5cbjEuU2VhbiBDaXRpemVuXG4yLlRoaXMgaXMgYW4gZXhhbXBsZSAmcXVvdDtvZiBhIHF1b3RlJnF1b3Q7IGluIGEgc3RyaW5nXG4zLlRoZSBOdW1iZXIgb2YgY2hhcmFjdGVycyBpbiBzdHJpbmcgaXM6IDZcbjQuVGhlIE51bWJlciBvZiBjaGFyYWN0ZXJzIGluIHN0cmluZyBpczogMTJcbjUuYWIgY2RlZlxuNi52YXJpYWJsZXMgYXJlIGVxdWFsXG43LnZhcmlhYmxlcyBhcmUgbm90IGVxdWFsXG44LiB2YXJpYWJsZSBub3Qgc2V0IG9yIHVuZGVmaW5lZFxuOS5WYXJpYWJsZSBpcyBhIHN0cmluZ1xuMTAuVmFyaWFibGUgaXMgbm90IGFuIGludGVnZXJcbj0mZ3Q7IiwiaXNfcHJvamVjdCI6ZmFsc2UsInRpbWVfY3JlYXRlZCI6IjIwMTctMDktMTlUMTY6MzE6MjEuNjM5WiIsInRpbWVfdXBkYXRlZCI6bnVsbCwibGFuZ3VhZ2UiOiJwaHAiLCJmaWxlcyI6e30sInVzZXJfc2Vzc2lvbiI6eyJzZXNzaW9uX2lkIjoyNjU4ODgzLCJ1c2VyX2lkIjoxOTM2MywidGl0bGUiOiJQSFAgLSBMZWN0dXJlIDIiLCJkZXNjcmlwdGlvbiI6IiIsInZpZXdzIjoyNSwiaWQiOjk5MTQ0OTV9LCJvd25lciI6MTkzNjMsInRpdGxlIjoiUEhQIC0gTGVjdHVyZSAyIn0='))</script><script>GOVAL_TOKEN = JSON.parse(atob('eyJ0aW1lX2NyZWF0ZWQiOjE1MDYzNTc3NzU0OTksIm1zZ19tYWMiOiJCclRzeEtjaWk4Y0JoTHlQQXNUenlKaUh0V3RYd0Q1bGw3R0pYNE90K3BRPSJ9'))</script><script>USER_DATA = undefined</script><script>CANNY_SSO_TOKEN = undefined</script><meta property="og:title" content="repl.it"/><meta property="og:description" content="Powerful and simple online compiler, IDE, interpreter, and REPL. Write, run, save, and share code from your browser!"/><meta property="og:type" content="article"/><meta property="og:url" content="https://repl.it/"/><meta property="og:image" content="https://repl.it/public/images/logo-small-square.png"/><meta property="og:site_name" content="repl.it"/><meta property="fb:app_id" content="1775481339348651"/><meta itemprop="name" content="repl.it"/><meta itemprop="description" content="Powerful and simple online compiler, IDE, interpreter, and REPL. Write, run, save, and share code from your browser! "/><meta itemprop="image" content="https://repl.it/public/images/logo-small.png"/><meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1"/><meta name="description" content="Powerful and simple online compiler, IDE, interpreter, and REPL. Code, compile, and run code in JavaScript, Python, Ruby, Java, Node.js, Go, Scheme, C, C#, C++, Lua, CoffeeScript and much more.and more programming languages."/><meta name="keywords" content="Online,Interpreters,Compilers,JavaScript,Python,Ruby,Scheme,APL,Lua,CoffeeScript,Forth,QBasic,C,C++,C#,F#,nodejs,node,terminal,console,share,run,code,coding,programming,esoteric,languages,web,REPL,Compiler"/><meta name="author" property="og:author" content="repl.it"/><meta charset="UTF-8"/></head><body style="margin:0;"><div id="root"><div class="static-header"><a class="static-logo" href="/languages"><img src="/public/images/logo-small.png" alt="repl.it"/></a></div><div class="static-session-wrapper"><div class="static-session-editor"><h4>PHP - Lecture 2</h4><code><pre>// 1. example of concatenating strings (joining strings together )
+$firstName = &#39;Sean&#39;;
+$lastName = &#39;Citizen&#39;;
+
+$name = $firstName.&quot; &quot;.$lastName;
+
+echo &quot;\n1.&quot;; // this just outputs a new line
+
+echo $name;
+
+// 2. example of escaping charaters
+$str = &quot;This is an example \&quot;of a quote\&quot; in a string&quot;;
+echo &quot;\n2.&quot;;
+echo $str;
+//
+// 3. and 4. using the strlen() to find the number of characters in a string
+//
+echo &quot;\n3.&quot;;
+$str = &#39;abcdef&#39;;
+echo &quot;The Number of characters in string is: &quot;.strlen($str); // 6
+echo &quot;\n4.&quot;;
+$str = &#39;Sean Citizen&#39;;
+echo &quot;The Number of characters in string is: &quot;.strlen($str); // 12
+
+// 5. using the strlen() in built php function to trim leading and trailing characters
+// from a string, in this example we are removing blank characters from the start
+// and end of the string 
+echo &quot;\n5.&quot;; 
+
+$str = &#39; ab cdef &#39;;
+echo trim($str); // &#39;ab cdef&#39;
+//
+// 6. example of using == comparison operator
+$one = 100;
+$two = &quot;100&quot;;
+//
+if ($one == $two)
+  echo &quot;\n6.&quot;.&quot;variables are equal&quot;;
+else
+    echo &quot;\n6.&quot;.&quot;variables are not equal&quot;;
+//
+// 7. example of using === comparison operator
+//
+if ($one === $two)
+  echo &quot;\n7.&quot;.&quot;variables are equal&quot;;
+else
+    echo &quot;\n7.&quot;.&quot;variables are not equal&quot;;
+//
+// 8. check if variable $frty has been defined
+// we haven&#39;t defined it anywhere above so should return false
+//
+if (isset($frty))
+  echo &quot;\n8. variable defined&quot;; 
+else
+  echo &quot;\n8. variable not set or undefined&quot;; 
+//
+// 9. check if variable is a string
+//
+$firstname = &#39;Sean&#39;;
+if (is_string($firstname))
+  echo &quot;\n9.&quot;.&quot;Variable is a string&quot;;
+else
+  echo &quot;\n9.&quot;.&quot;Variable is not a string&quot;;
+//
+// 10. check if variable is an integer
+//
+if (is_int($firstname))
+  echo &quot;\n10.&quot;.&quot;Variable is a integer&quot;;
+else
+  echo &quot;\n10.&quot;.&quot;Variable is not an integer&quot;;
+ 
+
+
+
+  
+</pre></code></div><div class="static-session-console"><div class="static-session-loader"><div></div><div></div><div></div><div class="static-session-prompt"></div></div></div></div></div><script src="/public/ace/ace.js?f07920b863c3badc02dd03d59a9b7d7d"></script><script src="/public/main.79ee56d6b8140ea471ee.bundle.js"></script></body></html>

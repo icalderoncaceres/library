@@ -1,0 +1,22 @@
+<?php
+//
+// This is a very small sample register page. The user will fill out their information
+// on the form. When they click the submit button, the data will be inserted into the database.
+if($_POST){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+	$email = $_POST['email'];
+    
+    try {
+        $host = '127.0.0.1';
+        $dbname = 'wdtest';
+        $user = 'root';
+        $pass = '';
+        # MySQL with PDO_MYSQL
+        $DBH = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+		//insert registerB.txt here
+   
+ } catch(PDOException $e) {echo 'Error' . $e;} 
+    
+}
+?>
