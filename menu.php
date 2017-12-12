@@ -24,10 +24,10 @@ MAIN MENU
 <hr>
 <?php
 if($_SESSION['type']=='student'):?>
-	
-	<a href="#">1. Search the library for book using title, including wildcard search.</a><br><br>
-	<a href="#">2. Checkout a book from the library if it is available.</a><br><br>
-	<a href="#">3. View their checked out books, displaying due date.</a><br><br>
+
+	<a href="search.php">1. Search the library for book using title, including wildcard search.</a><br><br>
+	<a href="checkout.php">2. Checkout a book from the library if it is available.</a><br><br>
+	<a href="viewCheckout.php">3. View their checked out books, displaying due date.</a><br><br>
 	<form class='form-style' action="menu.php" method="post">
 	<input type="submit" name="submit" value="4. Logout of the system, invalidating the current session." class='button'/>
 	</form>
@@ -35,11 +35,13 @@ if($_SESSION['type']=='student'):?>
 
 <?php
 else:?>
-	<a href="#">5. View Checked out books</a><br><br>
-	<a href="#">6. Check a book back in</a><br><br>
-	<a href="#">7. View books past their due date with student id displayed.</a><br><br>
-	<a href="#">8. Add a new book to the system</a><br><br>
-	<a href="#">9. Logout of the system, invalidating the current session.</a><br><br>
+	<a href="viewCheckout.php">5. View Checked out books</a><br><br>
+	<a href="checkBack.php">6. Check a book back in</a><br><br>
+	<a href="viewPast.php">7. View books past their due date with student id displayed.</a><br><br>
+	<a href="addBook.php">8. Add a new book to the system</a><br><br>
+	<form class='form-style' action="menu.php" method="post">
+	<input type="submit" name="submit" value="4. Logout of the system, invalidating the current session." class='button'/>
+	</form>
 <?php
 endif;
 ?>
