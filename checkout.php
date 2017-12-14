@@ -5,21 +5,42 @@ if(!isset($_SESSION['username'])){
 	exit();
 }
 
+$message="";
+try {
+	$host = '127.0.0.1';
+	$dbname = 'library';
+	$user = 'root';
+	$pass = '';
+	# MySQL with PDO_MYSQL
+	$DBH = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+	$listBooks = $DBH->prepare("select * from books");
+	$listBooks->execute();
+	if($_POST){
+		var_dump($_POST['books_id']);
+		var_dump($_POST['books_title']);
+		var_dump($_SESSION['users_id']);
+		var_dump($_SESSION['username']);
+		var_dump(date("Y-m-d H:i:s",time()));
+		try {
+			$sql = "INSERT INTO out_books (books_id, books_title, users_id, studentname, startdate,duedate) VALUES (?, ?, ?, ?, ?, ?);";
+			$sth = $DBH->prepare($sql);					
+			$sth->bindParam(1, $_POST['books_id']);
+			$sth->bindParam(2, $_POST['books_title']);
+			$sth->bindParam(3, $_SESSION['users_id']);
+			$sth->bindParam(4, $_SESSION['username']);
+			$sth->bindParam(5, date("Y-m-d H:i:s",time()));
+			$sth->bindParam(6, date("Y-m-d H:i:s",time()));
+			$sth->execute();
+			$message="<div>Success</div><hr>";
+		} catch(PDOException $e){
+			echo $e->getMessage();
+		}
 
-	try {
-		$host = '127.0.0.1';
-		$dbname = 'library';
-		$user = 'root';
-		$pass = '';
-		# MySQL with PDO_MYSQL
-		$DBH = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-		$listBooks = $DBH->prepare("select * from books");
-//		$listBooks->bindParam(1, $username);
-		$listBooks->execute();
-
-	} catch(PDOException $e){
-		echo $e->getMessage();
 	}
+} catch(PDOException $e){
+	echo $e->getMessage();
+}
+
 
 ?>
 <!DOCTYPE>
@@ -30,6 +51,7 @@ if(!isset($_SESSION['username'])){
 
 <h1>Welcome to Vilmarys's library</h1>
 <hr>
+<?php echo $message;?>
 CHECKOUT BOOK <br /><a href="menu.php">Go back</a>
 <br /><br /> 
 <form action="checkout.php" method="post">
@@ -57,7 +79,8 @@ CHECKOUT BOOK <br /><a href="menu.php">Go back</a>
 				<td><?php echo $book['author'];?></td>
 				<td>
 					<form action="checkout.php" method="post">
-						<input type="hidden" value="<?php echo $book["books_id"];?>">
+						<input type="hidden" name="books_id" value="<?php echo $book["books_id"];?>">
+						<input type="hidden" name="books_title" value="<?php echo $book["title"];?>">
 						<input type="submit" value="Checkout" />
 					</form>
 				</td>
