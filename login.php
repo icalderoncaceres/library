@@ -66,7 +66,7 @@
 <form action="login.php" method="post">
 Username <input type="text" name="username" value="<?php echo $username;?>" />   <br>
 Password <input type="password" name="password" maxlength="10" />   <br>
-<input type="submit"/>
+<input type="submit" value="Accept" />
 </form>
 </body>
 </html>

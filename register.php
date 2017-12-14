@@ -53,14 +53,15 @@
 					
 					$sth->execute();
 					$_SESSION["username"] = $username;
-					$_SESSION["users_id"] = $DBH->lastInsertId(); 
+					$_SESSION["users_id"] = $DBH->lastInsertId();
 					$_SESSION["type"]=$type;
 					header('Location:  confirm.php');
 					exit();
 				}
 				else
 					echo 'Username already taken!';
-			} catch(PDOException $e) {echo $e->getMessage();} 
+			} catch(PDOException $e) {echo $e->getMessage();
+			} 
 
 		}
 	}
@@ -77,7 +78,7 @@
 Username <input type="text" name="username" maxlength="50" value="<?php echo $username;?>" />   <br>
 Password <input type="password" name="password" maxlength="10" value="<?php echo $password;?>" />   <br>
 Confirm <input type="password" name="password_confirm" maxlength="10" value="<?php echo $password_confirm;?>" />   <br>
-<input type="submit"/>
+<input type="submit" value="Save"/>
 </form>
 </body>
 </html>
